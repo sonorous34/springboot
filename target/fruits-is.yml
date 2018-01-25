@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    name: fruits
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: fruits@sha256:51fba6025e104548953de17706a9a16bf585ba1df41a9a249040a0822b232bf2
+        namespace: dev
+      name: latest
